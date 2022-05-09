@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorPrimary">#2699FB</color>
+    <color name="colorPrimaryDark">#1867AA</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="lightColorPrimary">#41A7FE</color>
+    <color name="launcher_background_icon">#FFFFFF</color>
+
+    <color name="primaryBlack">#000000</color>
+    <color name="primaryWhite">#FFFFFF</color>
+
+    <color name="iconTint">#2699FB</color>
+    <color name="alternativeIconTint">#FFFFFF</color>
+    <color name="darkIconTint">#000000</color>
+    <color name="errorTint">#FF153C</color>
+
+    <color name="primaryText">#2699FB</color>
+    <color name="alternativeText">#FFFFFF</color>
+    <color name="titleText">#000000</color>
+    <color name="subText">#777777</color>
+    <color name="lightGrayText">#ECE2E2</color>
+
+    <color name="progressBarBg">#FFFFFF</color>
+
+    <color name="roundedButtonsBg">#2699FB</color>
+    <color name="alternativeRoundedButtonsBg">#FFFFFF</color>
+
+    <color name="bottomNavigationItemSelected">#FFFFFF</color>
+    <color name="bottomNavigationItem">#444444</color>
+
+    <color name="onBoardingScreenBackground">#FFFFFF</color>
+    <color name="onBoardingScreenButtonBackground">#FFFFFF</color>
+    <color name="onBoardingScreenSelectedTabIndicator">#4c84ff</color>
+    <color name="onBoardingScreenButtonTextColor">#2699FB</color>
+    <color name="onBoardingScreenTabIndicator">#c0c0c0</color>
+
+    <color name="lowAttendanceColor">#FF153C</color>
+    <color name="highAttendanceColor">#6AFF1F</color>
+    <color name="requiredAttendanceColor">#F0F812</color>
+
+    <color name="audioColor1">#70ACDF</color>
+    <color name="audioColor2">#3885C6</color>
+    <color name="audioColor3">#1D68A8</color>
+    <color name="audioColor4">#0361B1</color>
+    <color name="audioColor5">#07457A</color>
+
+    <color name="notesItemActivated">#555555</color>
+    <color name="notesItemBackground">#F8F8F8</color>
+
+    <color name="bottomSheetBackground">#888888</color>
+</resources>

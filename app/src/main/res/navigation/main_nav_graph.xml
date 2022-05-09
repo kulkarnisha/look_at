@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.lookat.fragments.HomeFragment"
+        android:label="@string/navigation_menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_nav_notes"
+            app:destination="@id/nav_notes"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_home_to_mediaActivity"
+            app:destination="@id/mediaActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_attendance"
+        android:name="com.lookat.fragments.AttendanceFragment"
+        android:label="@string/bottom_navigation_menu_attendance"
+        tools:layout="@layout/fragment_attendance" >
+        <action
+            android:id="@+id/action_nav_attendance_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_starred"
+        android:name="com.lookat.fragments.StarredFragment"
+        android:label="@string/bottom_navigation_menu_starred"
+        tools:layout="@layout/fragment_starred" >
+        <action
+            android:id="@+id/action_nav_starred_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_starred_to_notesSearchFragment"
+            app:destination="@id/notesSearchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_starred_to_mediaActivity"
+            app:destination="@id/mediaActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_starred_to_nav_notes"
+            app:destination="@id/nav_notes"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_starred_to_fileFragment"
+            app:destination="@id/fileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.lookat.fragments.NotesFragment"
+        android:label="@string/bottom_navigation_menu_notes"
+        tools:layout="@layout/fragment_notes">
+
+        <action
+            android:id="@+id/action_nav_notes_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_notes_to_fileFragment"
+            app:destination="@id/fileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_nav_notes_to_notesSearchFragment"
+            app:destination="@id/notesSearchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fileFragment"
+        android:name="com.lookat.fragments.FileFragment"
+        android:label="@string/bottom_navigation_menu_notes"
+        tools:layout="@layout/fragment_file">
+        <argument
+            android:name="FilePath"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_fileFragment_self"
+            app:destination="@id/fileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_fileFragment_to_notesSearchFragment"
+            app:destination="@id/notesSearchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fileFragment_to_mediaActivity"
+            app:destination="@id/mediaActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reminder"
+        android:name="com.lookat.fragments.ReminderFragment"
+        android:label="@string/navigation_menu_reminders"
+        tools:layout="@layout/fragment_reminder">
+        <action
+            android:id="@+id/action_nav_reminder_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_reminder_to_reminderDialogFragment"
+            app:destination="@id/reminderDialogFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <deepLink
+            app:uri="https://www.studypartner.com/reminders"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/reminderDialogFragment"
+        android:name="com.lookat.fragments.ReminderDialogFragment"
+        android:label="@string/navigation_menu_reminders"
+        tools:layout="@layout/fragment_reminder_dialog">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.lookat.fragments.ProfileFragment"
+        android:label="@string/navigation_menu_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.lookat.fragments.AboutUsFragment"
+        android:label="@string/navigation_menu_about_us"
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_nav_about_us_to_nav_home"
+            app:destination="@id/nav_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/notesSearchFragment"
+        android:name="com.lookat.fragments.NotesSearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_notes_search">
+        <argument
+            android:name="NotesArray"
+            app:argType="com.lookat.models.FileItem[]" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mediaActivity"
+        android:name="com.lookat.activities.MediaActivity"
+        android:label="activity_media"
+        tools:layout="@layout/activity_media">
+        <argument
+            android:name="MediaPath"
+            app:argType="string" />
+    </activity>
+
+    <activity
+        android:id="@+id/nav_logout"
+        android:name="com.lookat.activities.LoginActivity"
+        android:label="@string/navigation_menu_logout"
+        tools:layout="@layout/activity_login" />
+
+</navigation>

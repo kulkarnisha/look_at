@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        tools:context=".fragments.AboutUsFragment">
+
+        <ImageView
+            android:id="@+id/aboutUsBackgroundRectangle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:background="@drawable/background_rectangle_corners"
+            android:contentDescription="@string/file_background_rectangle_cd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutUsAppName" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:alpha="0.25"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/app_logo"
+            app:layout_constraintBottom_toBottomOf="@id/aboutUsSubText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/aboutUsBackgroundRectangle" />
+
+        <TextView
+            android:id="@+id/aboutUsAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/alternativeText"
+            android:textSize="@dimen/extraLargeText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/aboutUsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginTop="@dimen/largeMargin"
+            android:justificationMode="inter_word"
+            android:text="@string/about_us_text"
+            android:textColor="@color/primaryBlack"
+            android:textSize="@dimen/mediumText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/aboutUsBackgroundRectangle" />
+
+        <TextView
+            android:id="@+id/aboutUsSubText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:justificationMode="inter_word"
+            android:text="@string/about_us_subtext"
+            android:textColor="@color/primaryBlack"
+            android:textSize="@dimen/mediumText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutUsText" />
+
+        <TextView
+            android:id="@+id/aboutUsTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:padding="8dp"
+            android:text="@string/about_us_team"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="@dimen/largeText"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutUsSubText" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/teamCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mediumMargin"
+            android:layout_marginStart="@dimen/mediumMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="@dimen/mediumMargin"
+            app:cardElevation="@dimen/mediumElevation"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="@dimen/mediumPadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutUsTeam">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/teamCard1Github"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="@dimen/smallMargin"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/about_us_github_icon"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/github_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/teamCard1Designation"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/teamCard1LinkedIn"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="@dimen/smallMargin"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/about_us_linked_in_icon"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/linked_in_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/teamCard1Github"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/teamCard1Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallPadding"
+                    android:text="@string/team_nisha_kulkarni"
+                    android:textColor="@color/primaryBlack"
+                    android:textSize="@dimen/mediumText"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/teamCard1Designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/smallPadding"
+                    android:paddingEnd="@dimen/smallPadding"
+                    android:paddingStart="@dimen/smallPadding"
+                    android:text="@string/team_designer_amp_developer"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/teamCard1Name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

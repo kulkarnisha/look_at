@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/mediumPadding"
+    android:paddingBottom="@dimen/mediumPadding"
+    android:columnCount="3"
+    android:rowCount="3">
+
+    <LinearLayout
+        android:id="@+id/addFolder"
+        android:layout_width="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_new_folder"
+            android:src="@drawable/folder_add_icon_bs"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_new_folder"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addFile"
+        android:layout_width="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_file"
+            android:src="@drawable/file_add_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_file"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addVideo"
+        android:layout_width="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_video"
+            android:src="@drawable/video_add_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_video"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/addImage"
+        android:layout_width="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_image"
+            android:src="@drawable/image_add_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_image"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addCamera"
+        android:layout_width="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_camera"
+            android:src="@drawable/camera_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_camera"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addNote"
+        android:layout_width="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_note"
+            android:src="@drawable/notes_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_note"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addLink"
+        android:layout_width="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_link"
+            android:src="@drawable/link_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_link"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addAudio"
+        android:layout_width="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_audio"
+            android:src="@drawable/music_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_audio"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addVoice"
+        android:layout_width="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/bottom_sheet_record"
+            android:src="@drawable/mic_icon_bs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom_sheet_record"
+            android:textColor="@color/alternativeText" />
+    </LinearLayout>
+
+</GridLayout>

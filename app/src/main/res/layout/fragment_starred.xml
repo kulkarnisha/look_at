@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/starredBackgroundRectangle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:background="@drawable/background_rectangle_corners"
+            android:contentDescription="@string/file_background_rectangle_cd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/starredLinearLayout" />
+
+        <LinearLayout
+            android:id="@+id/starredLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/largeMargin"
+            android:layout_marginStart="@dimen/largeMargin"
+            android:layout_marginTop="@dimen/mediumMargin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/starredSortButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/file_sort_button_cd"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sort_icon"
+                android:tint="@color/alternativeIconTint" />
+
+            <TextView
+                android:id="@+id/starredSortText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mediumMargin"
+                android:textColor="@color/alternativeText"/>
+
+            <ImageButton
+                android:id="@+id/starredSortOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/smallMargin"
+                android:contentDescription="@string/file_sort_order_cd"
+                android:scaleType="centerCrop"
+                android:src="@drawable/upward_arrow"
+                android:tint="@color/alternativeText"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/starredRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/mediumPadding"
+            android:paddingStart="@dimen/mediumPadding"
+            android:paddingTop="@dimen/mediumPadding"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/starredBackgroundRectangle"
+            app:layout_constraintVertical_bias="0.0"  />
+
+        <LinearLayout
+            android:id="@+id/starredEmptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/mediumPadding"
+            android:paddingStart="@dimen/mediumPadding"
+            android:paddingTop="@dimen/mediumPadding"
+            android:visibility="gone"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="@+id/starredBackgroundRectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/starredBackgroundRectangle" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="@string/starred_empty_icon_cd"
+                android:scaleType="centerCrop"
+                android:src="@drawable/starred_outline_icon"
+                android:tint="@color/iconTint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mediumMargin"
+                android:text="@string/starred_empty"
+                android:textAlignment="center"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/largeText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:text="@string/starred_empty_sub"
+                android:textAlignment="center"
+                android:textColor="@color/primaryText"
+                android:textSize="@dimen/mediumText" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

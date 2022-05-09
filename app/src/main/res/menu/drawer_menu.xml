@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:title="@string/navigation_menu_home"
+            android:icon="@drawable/home_icon"/>
+
+        <item android:id="@+id/nav_reminder"
+            android:title="@string/navigation_menu_reminders"
+            android:icon="@drawable/reminder_icon"/>
+
+    </group>
+
+    <item android:title="@string/navigation_menu_profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/nav_profile"
+                    android:title="@string/navigation_menu_profile"
+                    android:icon="@drawable/username_icon"/>
+
+                <item android:id="@+id/nav_logout"
+                    android:title="@string/navigation_menu_logout"
+                    android:icon="@drawable/logout_icon"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/navigation_menu_settings">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/nav_feedback"
+                    android:title="@string/navigation_menu_feedback"
+                    android:icon="@drawable/feedback_icon"/>
+
+                <item android:id="@+id/nav_report_bug"
+                    android:title="@string/navigation_menu_report_bug"
+                    android:icon="@drawable/report_bug_icon"/>
+
+                <item android:id="@+id/nav_about_us"
+                    android:title="@string/navigation_menu_about_us"
+                    android:icon="@drawable/about_us_icon"/>
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>
